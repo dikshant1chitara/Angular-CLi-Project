@@ -1,0 +1,38 @@
+.input-group> input[type="text"]{
+    max-width: 94% !important;
+    margin-left:1%
+
+}
+#basic-addon2{
+    background:linear-gradient(to right, #686efc, #cc5bb3);
+}
+#btn{
+    background:transparent !important;
+    border: none;
+}
+#btn fa-icon{
+    color: white;
+}
+
+/* flag styles */
+.container-fluid #one{
+    height: 50px;
+    width: 98%;
+    background-color:rgb(255, 119, 0);
+}
+.container-fluid #two{
+    height: 50px;
+    width: 98%;
+    background-color:  rgb(255, 230, 132);
+    
+}
+.up{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 30%;
+    z-index: 2;
+    font-size: 7vh;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+    line-height: 1.4;
+    
+}

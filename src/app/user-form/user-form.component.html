@@ -1,0 +1,64 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="body">
+     <div>
+       <label for="firstName">First Name:</label>
+       <input type="text" id="firstName" name="firstName" required minlength="3" [(ngModel)]="user.firstName" class="form-control">
+       <div *ngIf="userForm.controls['firstName']?.errors?.['required']" class="error-message">First Name is required.</div>
+       <div *ngIf="userForm.controls['firstName']?.errors?.['minlength']" class="error-message">First Name should have a minimum of 3 characters.</div>
+     </div>
+   
+     <div>
+       <label for="lastName">Last Name:</label>
+       <input type="text" id="lastName" name="lastName" required minlength="3" [(ngModel)]="user.lastName" class="form-control">
+       <div *ngIf="userForm.controls['lastName']?.errors?.['required']" class="error-message">Last Name is required.</div>
+       <div *ngIf="userForm.controls['lastName']?.errors?.['minlength']" class="error-message">Last Name should have a minimum of 3 characters.</div>
+     </div>
+   
+     <div>
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email" required email [(ngModel)]="user.email" class="form-control">
+       <div *ngIf="userForm.controls['email']?.errors?.['required']" class="error-message">Email is required.</div>
+       <div *ngIf="userForm.controls['email']?.errors?.['email']" class="error-message">Invalid email format.</div>
+     </div>
+   
+     <div>
+       <label for="course">Course:</label>
+       <select id="course" name="course" required [(ngModel)]="user.course" class="form-control">
+         <option value="">Select a course</option>
+         <option value="BCA">BCA</option>
+         <option value="MCA">MCA</option>
+         <option value="B.tech">B.tech</option>
+       </select>
+       <div *ngIf="userForm.controls['course']?.errors?.['required']" class="error-message">Course is required.</div>
+     </div>
+   
+     <div>
+       <label>Gender:</label>
+       <div class="gender-options">
+         <label>
+           <input type="radio" name="gender" value="male" [(ngModel)]="user.gender"> Male
+         </label>
+         <label>
+           <input type="radio" name="gender" value="female" [(ngModel)]="user.gender"> Female
+         </label>
+       </div>
+     </div>
+     <div>
+         <label for="profileImage">Profile Image:</label>
+         <input type="file" id="profileImage" name="profileImage" accept="image/*" (change)="onFileChange($event)" class="form-control">
+         <div *ngIf="userForm.controls['profileImage']?.errors?.['required']" class="error-message">Profile Image is required.</div>
+       </div>
+   
+     <button type="submit" class="submit-button">Submit</button>
+     </div>
+   </form>
+   <div *ngIf="submitted" class="submitted-data">
+     <h3>Submitted Data:</h3>
+     <p>First Name: {{ user.firstName }}</p>
+     <p>Last Name: {{ user.lastName }}</p>
+     <p>Email: {{ user.email }}</p>
+     <p>Gender: {{ user.gender }}</p>
+     <div *ngIf="user.profileImage" class="profile-image">
+       <img [src]="getUserImageSrc()" alt="Profile Image">
+     </div>
+   </div>

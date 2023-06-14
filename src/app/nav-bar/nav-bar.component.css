@@ -1,0 +1,28 @@
+
+
+#navbarNavDropdown ul li a{
+    border-bottom: 4px solid #31bafc;
+    padding-left: 40px;
+    width: 100%;
+    text-align: center
+    
+}
+
+.other li a .btn{
+    border:none;
+}
+.navbar-nav .nav-item a:hover{
+    background:linear-gradient(to right, #31bafc, #686efc);
+}
+#drop{
+    margin-left: 20px;
+}
+#drop .log-in{
+    width: 200px;
+    border-radius: 0;
+}
+#drop .btn-primary{
+    background-color: #686efc;
+    border-radius: 0;
+    width: 120px;
+}

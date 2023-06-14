@@ -1,0 +1,72 @@
+
+<div class="container-fluid">
+  <form>
+    <div class="input-group input-group-lg mb-3">
+      <input type="text" class="form-control"  name = "searchTerm"
+        placeholder="Search All Gifs and stickers" aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2"> <button type="submit"  (click)="searchNewGifs()" 
+          class=" btn text-center text-white"><fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+        </button></span>
+    </div>
+   </form>
+</div>  
+
+<!-- Main component  for flag-->
+<div class="container-fluid">
+  <div class="container-fluid" id="one"></div>
+  <p class="up text-white fw-bold">Jai Shree Ram</p>
+  <div class="container-fluid"id="two"></div>
+</div>
+
+<!-- display of Gifs -->
+<div class="row">
+  <div class="container">
+    <p class="head text-white ms-5 fs-4 mt-2">Trending</p>
+  </div>
+</div>
+
+<div class="container content">
+
+  <div class="col-md-12" *ngFor="let gifsImage of gifsImages">
+    <img src="{{gifsImage.images.downsized.url}}" alt="Trending Gifs" />
+  </div>
+
+</div>
+<div>
+  <br>
+  <br>
+</div>
+<div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="list-unstyled">
+            <li style="color: white;"><a href="#">About</a></li>
+            <li style="color: white;"><a href="#">Contact</a></li>
+            <li style="color: white;"><a href="#">Privacy Policy</a></li>
+            <li style="color: white;"><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Follow Us</h4>
+          <ul class="list-unstyled social-icons">
+            <li style="color: white;"><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li style="color: white;"><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li style="color: white;"><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li style="color: white;"><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 style="color: white;">Newsletter</h4>
+          <p style="color: white;">Sign up for our newsletter to get the latest gif memes delivered straight to your inbox.</p>
+          <input type="email" class="form-control" placeholder="Enter your email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+</div>
+
