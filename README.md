@@ -1,5 +1,9 @@
 # GiphyReplica
 
+The Angular project is a clone of GIPHY.com, fetching API data. It utilizes pipes for data transformation, enhancing user experience. Custom components enhance code organization and reusability. Other Angular features like directives and dependency injection are employed for interactivity and scalability. This project showcases Angular's ability to build responsive interfaces and maintain clean code.
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Development server
